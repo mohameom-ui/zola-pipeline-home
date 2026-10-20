@@ -44,6 +44,14 @@ PLAN = [
     ("b2026-lowrise-d",    "refs/ref-2026-lowrise.png",      "low podium variant"),
     ("b2026-skyscraper-b", "refs/ref-2026-skyscraper-a.png", "tapered setbacks + cyan beacon variant"),
     ("b2026-skyscraper-c", "refs/ref-2026-skyscraper-b.png", "slender spire + holo rings + gold beacon"),
+    # ---- slice 3b: wealth-tier expansion (lowrise-weighted + civic landmarks) ----
+    ("b2026-lowrise-e",    "refs/ref-2026-lowrise.png",    "market-row lowrise variant"),
+    ("b2026-lowrise-f",    "refs/ref-2026-market.png",     "market hall: arched glass front, gold cornice, rooftop garden"),
+    ("b2026-midrise-h",    "refs/ref-2026-midrise-b.png",  "terraced midrise variant"),
+    ("b2026-midrise-i",    "refs/ref-2026-midrise-a.png",  "gold-trim midrise variant"),
+    ("b2026-highrise-d",   "refs/ref-2026-highrise.png",   "carbon highrise variant"),
+    ("b2026-civic-dome-a", "refs/ref-2026-civic.png",      "civic dome landmark: colonnade drum, gold dome, beacon"),
+    ("b2026-civic-dome-b", "refs/ref-2026-civic.png",      "civic dome landmark variant"),
 ]
 
 MODLY_API = "http://127.0.0.1:8765"
