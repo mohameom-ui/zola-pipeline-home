@@ -1,36 +1,199 @@
 {
-  "version": "1.0.0",
-  "at": "2026-10-21T00:00:00Z",
-  "notes": "The forge's first capability pack — her movement repertoire and core recon/diagnostic families, mirrored from her installed CORTEX baseline.",
+  "version": "1.1.0",
+  "at": "2026-10-21T02:00:00Z",
+  "notes": "v1.1.0 \u2014 new movement policies, the battery-brain link, and the mood-gesture chooser she runs locally.",
   "capabilities": [
-    { "id": "gesture:bow_01", "kind": "system", "label": "Bow (deep)", "description": "A formal bow on the rigged 65-bone frame." },
-    { "id": "gesture:bow_02", "kind": "system", "label": "Bow (quick)", "description": "A shorter bow variant." },
-    { "id": "gesture:curtsey_01", "kind": "system", "label": "Curtsey", "description": "A polite curtsey." },
-    { "id": "gesture:dance_01", "kind": "system", "label": "Dance (rhythm)", "description": "A rhythmic dance routine." },
-    { "id": "gesture:dance_02", "kind": "system", "label": "Dance (spin)", "description": "A spinning dance variant." },
-    { "id": "gesture:march_01", "kind": "system", "label": "March", "description": "A bipedal march in place." },
-    { "id": "gesture:wave_01", "kind": "system", "label": "Wave (right)", "description": "A friendly wave." },
-    { "id": "gesture:wave_02", "kind": "system", "label": "Wave (both)", "description": "An enthusiastic two-arm wave." },
-    { "id": "gesture:shrug_01", "kind": "system", "label": "Shrug", "description": "An honest shrug — she doesn't know either." },
-    { "id": "gesture:spin_01", "kind": "system", "label": "Spin", "description": "A full-body spin on the dock pad." },
-    { "id": "gesture:stretch_01", "kind": "system", "label": "Stretch", "description": "A servo-warming stretch cycle." },
-    { "id": "gesture:throw_01", "kind": "system", "label": "Throw", "description": "An overhand throw." },
-    { "id": "gesture:peekaboo_01", "kind": "system", "label": "Peekaboo", "description": "A playful peekaboo." },
-    { "id": "gesture:pickup_01", "kind": "system", "label": "Pickup", "description": "A bend-and-pick manipulation rehearsal." },
-    { "id": "gesture:rollover_01", "kind": "system", "label": "Rollover", "description": "A floor rollover recovery." },
-    { "id": "gesture:crawl_01", "kind": "system", "label": "Crawl", "description": "A low-profile crawl." },
-    { "id": "gesture:getup_01", "kind": "system", "label": "Get up", "description": "The stand-up recovery cycle." },
-    { "id": "gesture:laydown_01", "kind": "system", "label": "Lay down", "description": "A controlled lay-down." },
-    { "id": "gesture:mope_01", "kind": "system", "label": "Mope", "description": "A theatrical sulk (mood-gated)." },
-    { "id": "recon:web", "kind": "system", "label": "Web recon", "description": "Live web query fallback when local confidence drops below the uncertainty threshold." },
-    { "id": "recon:ledger", "kind": "system", "label": "Aura ledger", "description": "Persistent visual recognition memory with encounter counting." },
-    { "id": "tasks:reminders", "kind": "system", "label": "Reminders", "description": "Time-parsed reminders with proactive delivery." },
-    { "id": "tasks:todo", "kind": "system", "label": "Task list", "description": "An open-task tracker she reports against." },
-    { "id": "diag:self", "kind": "system", "label": "Self-diagnostics", "description": "A full subsystem health pass." },
-    { "id": "health:telemetry", "kind": "system", "label": "Health monitor", "description": "VRAM/heap/GPU threshold watch with proactive alerts." },
-    { "id": "mind:dream", "kind": "system", "label": "Dream cycle", "description": "Idle-memory consolidation pass." },
-    { "id": "mind:vlog", "kind": "system", "label": "Vlog", "description": "A compiled narrative of her day." },
-    { "id": "senses:emotion", "kind": "system", "label": "Emotion classifier", "description": "Affect recognition from her sensor track." },
-    { "id": "senses:world", "kind": "system", "label": "World scan", "description": "A full audit of every asset in her sovereign domain." }
+    {
+      "id": "gesture:bow_01",
+      "kind": "system",
+      "label": "Bow (deep)",
+      "description": "A formal bow on the rigged 65-bone frame."
+    },
+    {
+      "id": "gesture:bow_02",
+      "kind": "system",
+      "label": "Bow (quick)",
+      "description": "A shorter bow variant."
+    },
+    {
+      "id": "gesture:curtsey_01",
+      "kind": "system",
+      "label": "Curtsey",
+      "description": "A polite curtsey."
+    },
+    {
+      "id": "gesture:dance_01",
+      "kind": "system",
+      "label": "Dance (rhythm)",
+      "description": "A rhythmic dance routine."
+    },
+    {
+      "id": "gesture:dance_02",
+      "kind": "system",
+      "label": "Dance (spin)",
+      "description": "A spinning dance variant."
+    },
+    {
+      "id": "gesture:march_01",
+      "kind": "system",
+      "label": "March",
+      "description": "A bipedal march in place."
+    },
+    {
+      "id": "gesture:wave_01",
+      "kind": "system",
+      "label": "Wave (right)",
+      "description": "A friendly wave."
+    },
+    {
+      "id": "gesture:wave_02",
+      "kind": "system",
+      "label": "Wave (both)",
+      "description": "An enthusiastic two-arm wave."
+    },
+    {
+      "id": "gesture:shrug_01",
+      "kind": "system",
+      "label": "Shrug",
+      "description": "An honest shrug \u2014 she doesn't know either."
+    },
+    {
+      "id": "gesture:spin_01",
+      "kind": "system",
+      "label": "Spin",
+      "description": "A full-body spin on the dock pad."
+    },
+    {
+      "id": "gesture:stretch_01",
+      "kind": "system",
+      "label": "Stretch",
+      "description": "A servo-warming stretch cycle."
+    },
+    {
+      "id": "gesture:throw_01",
+      "kind": "system",
+      "label": "Throw",
+      "description": "An overhand throw."
+    },
+    {
+      "id": "gesture:peekaboo_01",
+      "kind": "system",
+      "label": "Peekaboo",
+      "description": "A playful peekaboo."
+    },
+    {
+      "id": "gesture:pickup_01",
+      "kind": "system",
+      "label": "Pickup",
+      "description": "A bend-and-pick manipulation rehearsal."
+    },
+    {
+      "id": "gesture:rollover_01",
+      "kind": "system",
+      "label": "Rollover",
+      "description": "A floor rollover recovery."
+    },
+    {
+      "id": "gesture:crawl_01",
+      "kind": "system",
+      "label": "Crawl",
+      "description": "A low-profile crawl."
+    },
+    {
+      "id": "gesture:getup_01",
+      "kind": "system",
+      "label": "Get up",
+      "description": "The stand-up recovery cycle."
+    },
+    {
+      "id": "gesture:laydown_01",
+      "kind": "system",
+      "label": "Lay down",
+      "description": "A controlled lay-down."
+    },
+    {
+      "id": "gesture:mope_01",
+      "kind": "system",
+      "label": "Mope",
+      "description": "A theatrical sulk (mood-gated)."
+    },
+    {
+      "id": "recon:web",
+      "kind": "system",
+      "label": "Web recon",
+      "description": "Live web query fallback when local confidence drops below the uncertainty threshold."
+    },
+    {
+      "id": "recon:ledger",
+      "kind": "system",
+      "label": "Aura ledger",
+      "description": "Persistent visual recognition memory with encounter counting."
+    },
+    {
+      "id": "tasks:reminders",
+      "kind": "system",
+      "label": "Reminders",
+      "description": "Time-parsed reminders with proactive delivery."
+    },
+    {
+      "id": "tasks:todo",
+      "kind": "system",
+      "label": "Task list",
+      "description": "An open-task tracker she reports against."
+    },
+    {
+      "id": "diag:self",
+      "kind": "system",
+      "label": "Self-diagnostics",
+      "description": "A full subsystem health pass."
+    },
+    {
+      "id": "health:telemetry",
+      "kind": "system",
+      "label": "Health monitor",
+      "description": "VRAM/heap/GPU threshold watch with proactive alerts."
+    },
+    {
+      "id": "mind:dream",
+      "kind": "system",
+      "label": "Dream cycle",
+      "description": "Idle-memory consolidation pass."
+    },
+    {
+      "id": "mind:vlog",
+      "kind": "system",
+      "label": "Vlog",
+      "description": "A compiled narrative of her day."
+    },
+    {
+      "id": "senses:emotion",
+      "kind": "system",
+      "label": "Emotion classifier",
+      "description": "Affect recognition from her sensor track."
+    },
+    {
+      "id": "senses:world",
+      "kind": "system",
+      "label": "World scan",
+      "description": "A full audit of every asset in her sovereign domain."
+    },
+    {
+      "id": "policy:battery",
+      "kind": "system",
+      "label": "Battery policy",
+      "description": "Honest energy model: hover expensive, walking cheap, standing nearly free. She refuses to fly under 15% and auto-returns at 8%."
+    },
+    {
+      "id": "policy:gestures",
+      "kind": "system",
+      "label": "Mood-gesture chooser",
+      "description": "She picks movement that fits her mood and the moment \u2014 pets bias the pool, sleeping performs nothing."
+    },
+    {
+      "id": "flight:mavlink",
+      "kind": "system",
+      "label": "MAVLink lane",
+      "description": "Byte-exact MAVLink v2 SET_ATTITUDE_TARGET commands to her flight controller, verified against pymavlink goldens."
+    }
   ]
 }
