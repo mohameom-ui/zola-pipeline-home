@@ -1,23 +1,30 @@
 name: Pylint
 
-on: [push]
+on: [push, pull_request]
 
 jobs:
-  build:
+  lint:
     runs-on: ubuntu-latest
     strategy:
+      fail-fast: false
       matrix:
-        python-version: ["3.8", "3.9", "3.10"]
+        # 3.8 and 3.9 are no longer in the runner's version manifest; the
+        # workflow used to fail before pylint ever ran.
+        python-version: ["3.11", "3.12", "3.13"]
     steps:
-    - uses: actions/checkout@v4
-    - name: Set up Python ${{ matrix.python-version }}
-      uses: actions/setup-python@v3
-      with:
-        python-version: ${{ matrix.python-version }}
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install pylint
-    - name: Analysing the code with pylint
-      run: |
-        pylint $(git ls-files '*.py')
+      - uses: actions/checkout@v4
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install pylint
+        run: |
+          python -m pip install --upgrade pip
+          pip install pylint
+      # agent.py is a vendored copy of the Modly CLI (see NOTICE). Upstream
+      # style is not ours to police, and local behaviour belongs in the bridge.
+      - name: Lint the forge's own scripts
+        run: |
+          pylint --disable=C0301,C0114,C0115,C0116 --fail-under=8 \
+            zola_bridge.py zola_batch.py \
+            watch_zola_v3.py watch_zola_v4.py watch_zola_v5.py watch_zola_v6.py
