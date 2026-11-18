@@ -4,7 +4,7 @@ Copyright (c) 2026 mohameom-ui
 This repository includes agent.py, a vendored copy of the Modly agent CLI
 (https://github.com/lightningpixel/modly), used under the MIT License.
 
-    Modly — Copyright (c) Lightning Pixel
+    Modly — Copyright (c) 2026 Lightning Pixel
     Licensed under the MIT License.
 
 agent.py is kept close to upstream on purpose: it is the wire to the Modly
