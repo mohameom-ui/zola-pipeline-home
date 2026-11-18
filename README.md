@@ -38,3 +38,8 @@ Pagefile ≥ 16-64 GB (os error 1455 — commit-limit exhaustion).
 All asset generations append to the consumer's ledger
 (Aetheria: `UPGRADE_NOTES.md` · ZOLA: `ZOLA_UPGRADE_NOTES.md`).
 This repo tracks the engine itself.
+
+## License
+
+MIT — see [LICENSE](LICENSE). `agent.py` is a vendored copy of the Modly
+agent CLI (MIT, Lightning Pixel); see [NOTICE](NOTICE) for that attribution.

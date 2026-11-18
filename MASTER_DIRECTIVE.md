@@ -36,6 +36,13 @@ three-sovereign ecosystem: this forge · Aetheria (3000) · ZOLA (3001).
 
 ## 2. ZOLA v2.2 — SOVEREIGN AI DRONE PET SPECIFICATION
 
+> **Status note (2026-11-18):** this section is the ratified 2026-10-20
+> baseline and is kept as written. The current body is v13.0.0 — 1759 mm
+> biped, 41 joints, four ducted collar fans at the neck base — specified in
+> the ZOLA repo's `docs/ZOLA-KNOWLEDGE-BASE.md`. Where the two disagree, the
+> knowledge base wins on hardware; this directive still governs repository
+> boundaries and provenance.
+
 Full system prompt: ZOLA repo `docs/zola-system-prompt.md`.
 Lexicon: ZOLA repo `docs/zola-dictionary.md`.
 

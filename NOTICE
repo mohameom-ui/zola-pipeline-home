@@ -1,0 +1,12 @@
+ZOLA Pipeline Home
+Copyright (c) 2026 mohameom-ui
+
+This repository includes agent.py, a vendored copy of the Modly agent CLI
+(https://github.com/lightningpixel/modly), used under the MIT License.
+
+    Modly — Copyright (c) Lightning Pixel
+    Licensed under the MIT License.
+
+agent.py is kept close to upstream on purpose: it is the wire to the Modly
+FastAPI backend. Local behaviour belongs in zola_bridge.py and zola_batch.py,
+so the vendored file stays replaceable.

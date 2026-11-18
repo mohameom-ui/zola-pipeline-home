@@ -42,8 +42,10 @@ panel, `/zola` companion page, and Pi bridge.
   live in her hangar; `docs/zola-system-prompt.md` is her agent config layer
 
 ### 1.3 ZOLA PIPELINE HOME — the forge
-The sovereign local 3D generation engine at
-`C:\Users\self_\zola-pipeline-home` (own git repo, own history). Powered by
+The sovereign local 3D generation engine, in its own repo
+(`mohameom-ui/zola-pipeline-home`, own history). At ratification the working
+copy lived at `C:\Users\self_\zola-pipeline-home`; the repo is now the source
+of truth. Powered by
 the Modly desktop app running Hunyuan3D 2 Mini Turbo / TripoSG on the local
 RTX 5060. **The engine answers to no consumer repo** (Rule 3,
 `MASTER_DIRECTIVE.md`) — consumer repos reference it by path.
